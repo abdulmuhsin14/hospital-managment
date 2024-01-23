@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "blocks.html" %}
+{% load crispy_forms_tags%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <h1>booking page</h1>
+    <div class="container w-20 text-center bg-info my-5">
+    <form action="" method="POST" w="28">
+        <!-- {{form.as_p}}  -->
+        {{form|crispy}}
+        {% csrf_token %}
+        <button class="btn btn-primary" type="submit">submit</button>
+        <br>
+    
+    {% endblock %}
+
+    <script src="" async defer></script>
+    
+</body>
+</html>
